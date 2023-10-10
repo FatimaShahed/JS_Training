@@ -1,0 +1,14 @@
+memory alloc - global space
+code execution - assign values to variables - function execution - a new code execution block is created and whenever there s return statement , it returns the control to the prev statement in memory
+call stack
+var , let , const diff
+var - func scoped, global scoped
+let - block scoped
+const - let + cant be changed
+hoisting - extract values of variables and functions before assigning any value
+this -  refers an object 
+	in case of no any object, it refers to the global object [object window]
+	in case of function in strict mode, refers to undefined
+	in case of event, refers to the object that received an event
+function execution
+	
