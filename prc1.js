@@ -334,12 +334,19 @@ var gameObj = {
 };
 var proxy = new Proxy(gameObj, {
     get :(o,prop) => {return prop in o ? o[prop] : "not defined"},
-    set :(o,prop,value) => o[prop]=value
+    set :(o,prop,value) => o[prop]=value,
+    has :(o,prop) => {
+        if (prop in o) 
+           return true
+        else 
+           return false
+
+    }
 
 }
 )
 proxy.level=12
-console.log(proxy)
+console.log("level" in proxy) //true
 
 //exposing one func to another is closure
 
@@ -359,3 +366,4 @@ var x="123 nan"
 var x=parseInt(x)
 console.log(typeof (123 != '456'))
 
+console.log(true | 0)
