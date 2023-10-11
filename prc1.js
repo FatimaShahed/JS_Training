@@ -333,7 +333,7 @@ var gameObj = {
     type : "hypercasual"
 };
 var proxy = new Proxy(gameObj, {
-    get :(o,prop) => {return prop in o ? o[prop] : "not defined"},
+    get :(o,prop) => {return  "not defined"},
     set :(o,prop,value) => o[prop]=value,
     has :(o,prop) => {
         if (prop in o) 
@@ -346,6 +346,7 @@ var proxy = new Proxy(gameObj, {
 }
 )
 proxy.level=12
+proxy.name
 console.log("level" in proxy) //true
 
 //exposing one func to another is closure
