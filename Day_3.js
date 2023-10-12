@@ -144,6 +144,11 @@ n.forEach(
     }
 )
 
+var arr=[]
+arr[0]=1
+arr[3]=2
+console.log(arr)
+
 
  
 
